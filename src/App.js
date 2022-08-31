@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './components/Pages/Home';
-import Continent from './components/Pages/Continent';
-import Country from './components/Pages/Country';
+import ContinentSearch from './components/ContinentSearch';
+import Country from './components/Country';
 
 function App() {
   return (
@@ -11,8 +11,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="continent" element={<Continent />} />
-          <Route path="country" element={<Country />} />
+          <Route path="/continent/:title" element={<ContinentSearch />} />
+          <Route path="/country/:name" element={<Country />} />
         </Routes>
       </Router>
     </div>

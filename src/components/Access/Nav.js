@@ -1,14 +1,14 @@
 import { NavLink } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
-import { FaGlobe } from 'react-icons/fa';
+import { FaGlobeAfrica } from 'react-icons/fa';
 
 const NavBar = ({ title }) => (
   <header className="header">
     <nav>
-      <ul className="menu flex">
+      <ul className="menu displayFlex">
         <li className="flex-1">
-          <NavLink to="/" className="link">
-            <FaGlobe />
+          <NavLink to="/" className="navLink">
+            <FaGlobeAfrica />
           </NavLink>
         </li>
         <li className="flex-1">{title}</li>

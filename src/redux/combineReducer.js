@@ -1,10 +1,10 @@
 import { combineReducers } from '@reduxjs/toolkit';
 import CountriesReducer from './countries';
-import countriesQuery from './continentQuery';
+import getContinent from './getContinent';
 
 const reducers = combineReducers({
   countries: CountriesReducer,
-  searcContries: countriesQuery,
+  searcContries: getContinent,
 });
 
 export default reducers;

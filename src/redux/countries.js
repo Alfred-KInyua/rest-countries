@@ -1,8 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import {
-  getCountries,
-  getRegionDetails,
-} from '../components/modules/Countries';
+import { getCountries, getRegionDetails } from '../components/API/API';
 
 const GET_COUNTRIES = './fetchCountries/GET_COUNTRIES';
 const GET_DETAILS = './fetchRegionDetails/GET_DETAILS';
@@ -17,7 +14,7 @@ export const fetchRegionDetails = createAsyncThunk(
   async (title) => {
     const response = await getRegionDetails(title);
     return response;
-  }
+  },
 );
 
 const slice = createSlice({
@@ -27,11 +24,11 @@ const slice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(
       fetchCountries.fulfilled,
-      (countries, action) => action.payload
+      (countries, action) => action.payload,
     );
     builder.addCase(
       fetchRegionDetails.fulfilled,
-      (countries, action) => action.payload
+      (countries, action) => action.payload,
     );
   },
 });

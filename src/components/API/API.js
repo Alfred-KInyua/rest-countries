@@ -22,7 +22,7 @@ export const getRegionDetails = async (region) => {
       headers: {
         'Content-Type': 'application/json',
       },
-    }
+    },
   );
   const data = await response
     .json()
