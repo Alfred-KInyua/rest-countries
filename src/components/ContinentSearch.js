@@ -12,10 +12,11 @@ const ContinentSearch = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchCountries(title));
-  }, []);
+  }, [dispatch, title]);
 
   const [searchText, setYourFilterText] = useState('');
-  regionDetails = regionDetails.filter((country) => country.name.common.includes(searchText));
+  regionDetails = regionDetails.filter((country) => country.name.common.toLowerCase()
+    .includes(searchText));
   const handleChange = (e) => {
     setYourFilterText(e.target.value.toLowerCase());
   };

@@ -160,9 +160,6 @@ body {
   background-color: #3fa812;
 }
 
-.country-table tr:hover {
-  background-color: #1f5d04;
-}
 
 .country-table th {
   padding-top: 1rem;
@@ -171,7 +168,7 @@ body {
   color: white;
 }
 
-/* searchbar */
+
 .search {
   width: 100%;
   position: relative;

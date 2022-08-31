@@ -22,7 +22,7 @@ const Home = () => {
   useEffect(() => {
     dispatch(fetchCountries());
     setLoading(true);
-  }, []);
+  }, [dispatch]);
 
   const [searchText, setYourFilterText] = useState('');
   regions = regions.filter((continent) => continent.toLowerCase().includes(searchText));
@@ -65,7 +65,7 @@ const Home = () => {
               number={countCountries(ctrs, region)}
             />
           ))
-          : 'loading data...'}
+          : 'Fetching data...'}
       </div>
     </div>
   );
