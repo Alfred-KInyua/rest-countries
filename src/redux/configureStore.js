@@ -4,7 +4,7 @@ import reducer from './reducer';
 
 const store = configureStore({
   reducer,
-  middlewares: [logger],
+  applyMiddleware: [logger],
 });
 
 export default store;

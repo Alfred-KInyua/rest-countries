@@ -1,11 +1,11 @@
 import { NavLink } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
-import { FaGlobe } from 'react-icons/fa';
+import { FaArrowAltCircleRight } from 'react-icons/fa';
 
 const Header = ({ title, number }) => (
   <div className="headers">
     <NavLink to={`/continent/${title}`} className="navLink">
-      <FaGlobe />
+      <FaArrowAltCircleRight />
       <div className="resource">
         <h3>{title}</h3>
         <p>

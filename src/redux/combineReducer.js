@@ -4,7 +4,7 @@ import getContinent from './getContinent';
 
 const reducers = combineReducers({
   countries: CountriesReducer,
-  searcContries: getContinent,
+  searchCountries: getContinent,
 });
 
 export default reducers;
