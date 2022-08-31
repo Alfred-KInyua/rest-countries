@@ -11,6 +11,7 @@ const Country = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchCountries());
+  // eslint-disable-next-line
   }, []);
   const country = countries.filter((country) => country.name.common === name);
   return (
